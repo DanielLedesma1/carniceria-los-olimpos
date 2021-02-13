@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Olimpos.Models.proveedores>
+
+@{
+    ViewBag.Title = "Proveedores";
+}
+
+<style>
+    #Tab {
+        margin-top:7px;
+        background-color: #e45353;
+    }
+</style>
+<div id="Tab" class="container" style="color:#ffffff">
+    <h2>Proveedores</h2>
+
+    <p>
+        @Html.ActionLink("Crear Nuevo", "Create")
+    </p>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nit_proveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom_proveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dir_proveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contacto_proveedor)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nit_proveedor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom_proveedor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dir_proveedor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contacto_proveedor)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id_proveedor }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id_proveedor }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.id_proveedor }) |
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

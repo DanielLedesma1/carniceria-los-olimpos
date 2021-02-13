@@ -1,0 +1,72 @@
+﻿@model Olimpos.Models.clientes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar?</h3>
+<div>
+    <h4>clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipodoc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodoc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apell_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apell_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contacto_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contacto_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero_cliente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

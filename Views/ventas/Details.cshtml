@@ -1,0 +1,58 @@
+﻿@model Olimpos.Models.ventas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detales</h2>
+
+<div>
+    <h4>ventas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_total_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_total_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientes.doc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientes.doc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productos.nom_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productos.nom_producto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_venta }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

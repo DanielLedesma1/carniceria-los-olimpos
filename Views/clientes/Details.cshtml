@@ -1,0 +1,66 @@
+﻿@model Olimpos.Models.clientes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipodoc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodoc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apell_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apell_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contacto_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contacto_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero_cliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_cliente }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

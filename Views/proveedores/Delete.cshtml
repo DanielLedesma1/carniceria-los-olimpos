@@ -1,0 +1,56 @@
+﻿@model Olimpos.Models.proveedores
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>proveedores</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nit_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nit_proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dir_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dir_proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contacto_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contacto_proveedor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

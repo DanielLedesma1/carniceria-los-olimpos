@@ -1,0 +1,26 @@
+﻿@model Olimpos.Models.categorias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>categorias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descrip_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descrip_categoria)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_categoria }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

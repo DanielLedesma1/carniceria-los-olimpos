@@ -1,0 +1,72 @@
+﻿@model Olimpos.Models.productos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar?</h3>
+<div>
+    <h4>productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oferta_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oferta_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.descrip_categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.descrip_categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedores.nit_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedores.nit_proveedor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

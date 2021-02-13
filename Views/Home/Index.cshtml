@@ -1,0 +1,127 @@
+﻿<style>
+
+    #Facebook {
+        background-image: url(../../Img/facebook.png);
+        margin-right: 20px;
+        height: 44px;
+        width: 44px;
+        border: 0;
+    }
+
+    #Instagram {
+        background-image: url(../../Img/instagram.png);
+        margin-right: 20px;
+        height: 44px;
+        width: 44px;
+        border: 0;
+    }
+
+    #Twitter {
+        background-image: url(../../Img/twitter.png);
+        margin-right: 20px;
+        height: 44px;
+        width: 44px;
+        border: 0;
+    }
+
+    #Barra {
+        border: 2px outset black;
+        margin-top: 10px;
+        background-color: #D5112C;
+        text-align: center;
+    }
+
+    #myCarousel {
+        margin-bottom:20px;
+    }
+
+    #cont {
+        border:2px outset black;
+        width:88.7%;
+        height:200px;
+        margin-left: 75px;
+        background-color: #D5112C;
+    }
+    a.navbar-brand {
+        color: #ffffff;
+        margin-left:-15px;
+    }
+
+    a.navbar-brand:active {
+        color: #ffffff
+    }
+
+    a.navbar-brand:link {
+        color: #ffffff
+    }
+
+    a.navbar-brand:visited {
+        color: #ffffff
+    }
+</style>
+
+<div id="Barra" class="jumbotron container" style="color:#ffffff">
+    <h1>Carniceria Los Olimpos</h1>
+    <p class="lead">Visitanos en nuestra tienda fisica o compra todos tus productos en nuestro sitio web</p>
+
+</div>
+
+<div id="myCarousel" class="carousel slide container" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active center-block">
+            <img src="~/Img/Logo.jpg" alt="Logo">
+        </div>
+
+        <div class="item center-block">
+            <img src="~/Img/Carne.jpg" alt="Chicago">
+        </div>
+
+        <div class="item center-block">
+            <img src="~/Img/Carne2.jpg" alt="New York">
+        </div>
+
+        <div class="item center-block">
+            <img src="~/Img/Carne3.jpg" alt="New York">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div id="cont" class="row" style="color:#ffffff">
+    <div class="col-md-4">
+        <h3>Bienvenido</h3>
+        <p>
+            Le damos la bienvenida a nuetra pagina web, donde puede encontrar ofertas de nuestros productos.
+            Envios a cualquier sitio.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3></h3>
+        <p>Consulte en nuestro sitio fisico.</p><br>
+        @Html.ActionLink("Contactenos","Contact","Home",new { @class = "navbar-brand" })
+    </div>
+    <div class="col-md-4">
+        <h3>Cualquier inquietud</h3>
+        <p>Busquenos en:</p><br>
+        <button id="Facebook" class="pull-left" onclick="location.href='https://www.facebook.com'"></button>
+        <button id="Instagram" class="pull-left" onclick="location.href='https://www.Instagram.com'"></button>
+        <button id="Twitter" class="pull-left" onclick="location.href='https://www.Twitter.com'"></button>
+    </div>
+</div>

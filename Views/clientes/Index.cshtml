@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Olimpos.Models.clientes>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    #Tab {
+	margin-top:7px;
+        background-color: #e45353;
+    }
+</style>
+<div id="Tab" class="container" style="color:#ffffff">
+<h2>Clientes</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tipodoc_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doc_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apell_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contacto_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genero_cliente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipodoc_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doc_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apell_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contacto_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genero_cliente)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_cliente }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_cliente }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id_cliente }) |
+        </td>
+    </tr>
+}
+
+</table>
+</div>

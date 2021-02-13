@@ -1,0 +1,64 @@
+﻿@model Olimpos.Models.ventas
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar?</h3>
+<div>
+    <h4>ventas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_total_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_total_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientes.doc_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientes.doc_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productos.nom_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productos.nom_producto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

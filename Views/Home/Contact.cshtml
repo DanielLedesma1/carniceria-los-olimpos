@@ -1,0 +1,52 @@
+﻿<style>
+    #mapa {
+        margin-top: 67px;
+        margin-left: 40px;
+    }
+    #cont {
+        margin-top:10px;
+        background-color: #bb1a1a;
+        border: 2px outset black;
+        height:580px;
+    }
+    #form {
+        border-right:2px solid black;  
+        width:240px;
+        height:578px;
+    }
+
+</style>
+<div id="cont" class="container">
+    <div class="row" style="color:#ffffff">
+        <div id="form" class="col-sm-4">
+            <h2>Contactenos</h2>
+            <p>Ingrese los siguientes Datos:</p>
+            <form class="form-inline" action="/action_page.php">
+                <div class="form-inline">
+                    <label class="active" for="name">Nombre:*</label><br />
+                    <input type="text" class="form-group-lg" id="name" placeholder="" name="name" required style="color:black">
+                </div><br />
+                <div class="form-inline">
+                    <label class="active" for="Lname">Apellido:*</label><br />
+                    <input type="text" class="form-group-lg" id="Lname" placeholder="" name="Lname" required style="color:black">
+                </div><br />
+                <div class="form-inline">
+                    <label class="active" for="tel">Telefono:*</label><br />
+                    <input type="number" class="form-group-lg" id="tel" placeholder="" name="tel" required style="color:black">
+                </div><br />
+                <div class="form-inline">
+                    <label class="active" for="email">Email:</label><br />
+                    <input type="email" class="form-group-lg" id="email" placeholder="" name="email" style="color:black">
+                </div><br />
+                <div class="form-inlineinput-group">
+                    <label class="active" for="comment">Comentario:</label><br />
+                    <textarea name="texto" rows="4" cols="20" style="color:black"></textarea>
+                </div><br>
+                <button type="submit" class="btn btn-group" onclick="url(EnvioExitoso.cshtml)" style="color:black">Enviar</button>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15908.802093669636!2d-74.11225020274462!3d4.557926923885808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98bde71877c9%3A0x777ca23448c612f0!2sCarnes%20Finas!5e0!3m2!1ses!2sco!4v1607823221249!5m2!1ses!2sco" width="800" height="450" frameborder="0" style="border:outset;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</div>

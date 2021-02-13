@@ -1,0 +1,205 @@
+﻿<head>
+    <title>Productos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        #section1 {      
+            margin-top:5px;
+            padding-top: 30px;
+            height: 580px;
+            color: #000000;
+            background-color: #bb1a1a;
+        }
+
+        #section2 {
+            padding-top: 50px;
+            height: 580px;
+            color: #000000;
+            background-color: #bb1a1a;
+        }
+
+        #section3 {           
+            padding-top: 50px;
+            height: 550px;
+            color: #000000;
+            background-color: #bb1a1a;
+        }
+
+        #section4 {
+            padding-top: 50px;
+            height: 680px;
+            color: #000000;
+            background-color: #bb1a1a;
+        }
+
+        #Img {
+            height:410px;
+            border: 2px outset black;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #Img1 {
+            width: 280px;
+            height: 460px;
+            border: 2px outset black;
+            margin-left: 20px;
+            margin-right: 18px;
+        }
+
+        a.navbar-brand {
+        color:#ffffff
+        }
+        a.navbar-brand:active {
+            color: #ffffff
+        }
+        a.navbar-brand:link {
+            color: #ffffff
+        }
+        a.navbar-brand:visited {
+            color: #ffffff
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myNavbar" data-offset="20">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Los Olimpos", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Res</a></li>
+                        <li><a href="#section2">Cerdo</a></li>
+                        <li><a href="#section3">Pollo</a></li>
+                        <li><a href="#section4">Lacteos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px;color:#ffffff">
+        <h1>Carne de res</h1><br><br>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/res.png"><br><br>
+            <p class="text-center">Precio: $19.800</p><br>
+            <p class="text-center">2 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/res1.png"><br><br>
+            <p class="text-center">Precio: $26.000</p><br>
+            <p class="text-center">3 unidades + bebida lactea</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/res2.png"><br><br>
+            <p class="text-center">Precio: $22.400</p><br>
+            <p class="text-center">2 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-right" id="Img">
+            <img src="~/Img/res3.png"><br>
+            <p class="text-center">Precio: $24.000</p><br>
+            <p class="text-center">1 unidad</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+    </div>
+    <div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px;color:#ffffff">
+        <h1>Carne de cerdo</h1><br><br>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/cerdo3.png"><br><br>
+            <p class="text-center">Precio: $16.700</p><br>
+            <p class="text-center">2 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/cerdo.png"><br><br>
+            <p class="text-center">Precio: $20.000</p><br>
+            <p class="text-center">1 unidad + bebida</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/cerdo1.png"><br><br>
+            <p class="text-center">Precio: $17.300</p><br>
+            <p class="text-center">2 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/cerdo2.png"><br><br><br><br>
+            <p class="text-center">Precio: $16.000</p><br>
+            <p class="text-center">1 unidad</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+    </div>
+    <div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px;color:#ffffff">
+        <h1>Carne de Pollo</h1><br><br>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/pollo.png"><br><br><br>
+            <p class="text-center">Precio: $13.100</p><br>
+            <p class="text-center">8 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/pollo1.png"><br><br><br>
+            <p class="text-center">Precio: $12.000</p><br>
+            <p class="text-center">2 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/pollo2.png"><br><br><br>
+            <p class="text-center">Precio: $10.800</p><br>
+            <p class="text-center">6 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img">
+            <img src="~/Img/pollo3.png">
+            <p class="text-center">Precio: $10.000</p><br>
+            <p class="text-center">7 unidades</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+    </div>
+    <div id="section4" class="container-fluid" style="padding-top:70px;padding-bottom:70px;color:#ffffff">
+        <h1>Bebidas</h1><br><br>
+        <div class="pull-left" id="Img1">
+            <img class="center-block" src="~/Img/Lacteo.png">
+            <br><p class="text-center">Precio: $5.500</p><br>
+            <p class="text-center">Botella 3 Litros Mountain Dew</p>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img1">
+            <img class="center-block" src="~/Img/lacteo1.png">
+            <p class="text-center">Precio: $4.500</p><br>
+            <p class="text-center">Botella 3 Litros Colombiana</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img1">
+            <img src="~/Img/lacteo2.1.png">
+            <br /><br /><p class="text-center">Precio: $10.900</p><br>
+            <p class="text-center">Botella 2 Litros + Lata Cocacola</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+        <div class="pull-left" id="Img1">
+            <img class="center-block" src="~/Img/lacteo3.png">
+            <p class="text-center">Precio: $5.000</p><br>
+            <p class="text-center">Botella 3 Litros Pepsi</p><br>
+            <button type="submit" class="btn btn-group center-block">Comprar</button>
+        </div>
+    </div>
+</body>
+
